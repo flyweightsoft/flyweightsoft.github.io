@@ -28,7 +28,7 @@ jobs:
 
       # Step 4: Build Angular project
       - name: Build Angular App
-        run: npm run build -- --output-path=dist/flyweight-soft/browser
+        run: npm run build
 
       # Step 5: Deploy `browser` folder contents to root of `gh-pages`
       - name: Deploy to GitHub Pages
