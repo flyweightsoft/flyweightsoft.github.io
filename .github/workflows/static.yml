@@ -30,9 +30,9 @@ jobs:
       - name: Build Angular App
         run: npm run build -- --output-path=dist/flyweight-soft/browser
 
-      # Step 5: Deploy `browser` folder to the root of `gh-pages`
+      # Step 5: Deploy `browser` folder contents to root of `gh-pages`
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.G_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: dist/flyweight-soft/browser
