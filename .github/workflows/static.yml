@@ -1,4 +1,4 @@
-name: Deploy Angular App to GitHub Pages
+name: Deploy Angular App to Docs Folder
 
 on:
   push:
@@ -28,11 +28,13 @@ jobs:
 
       # Step 4: Build Angular project
       - name: Build Angular App
-        run: npm run build
+        run: npm run build -- --output-path=docs
 
-      # Step 5: Deploy `browser` folder contents to root of `gh-pages`
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.G_TOKEN }}
-          publish_dir: dist/flyweight-soft/browser
+      # Step 5: Commit and Push `docs` Folder
+      - name: Deploy to Docs Folder
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs
+          git commit -m "Deploy Angular App to Docs Folder"
+          git push origin main
