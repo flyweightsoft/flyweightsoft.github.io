@@ -38,3 +38,5 @@ jobs:
           git add docs
           git commit -m "Deploy Angular App to Docs Folder"
           git push origin main
+        env:
+          GITHUB_TOKEN: ${{ secrets.G_TOKEN }}
