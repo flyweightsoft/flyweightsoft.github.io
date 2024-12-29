@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main  # Trigger on changes to the main branch
-  workflow_dispatch: # Allows manual trigger from the Actions UI
+  workflow_dispatch: # Allow manual trigger from the Actions UI
 
 jobs:
   build-and-deploy:
@@ -30,7 +30,7 @@ jobs:
       - name: Build Angular App
         run: npm run build -- --output-path=dist/flyweight-soft/browser
 
-      # Step 5: Deploy to GitHub Pages
+      # Step 5: Deploy `browser` folder to the root of `gh-pages`
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
