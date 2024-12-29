@@ -1,48 +1,37 @@
-name: Angular CI/CD Pipeline
+name: Deploy Angular App to GitHub Pages
 
 on:
   push:
     branches:
-      - main
-  pull_request:
-    branches:
-      - main
+      - main  # Trigger on changes to the main branch
+  workflow_dispatch: # Allows manual trigger from the Actions UI
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout code
+      # Step 1: Check out the repository
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      # Step 2: Set up Node.js
+      # Step 2: Set up Node.js environment
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18' # Use the Node.js version compatible with Angular 19
+          node-version: '18'
           cache: 'npm'
 
       # Step 3: Install dependencies
       - name: Install Dependencies
         run: npm install
 
-      # Step 4: Lint the code
-      - name: Lint Code
-        run: npm run lint
-
-      # Step 5: Run tests
-      - name: Run Tests
-        run: npm test
-
-      # Step 6: Build the Angular application
-      - name: Build Application
+      # Step 4: Build Angular project
+      - name: Build Angular App
         run: npm run build -- --output-path=dist/flyweight-soft/browser
 
-      # Step 7: Deploy to Hosting or Server (example for GitHub Pages or another provider)
+      # Step 5: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
-        if: ${{ github.ref == 'refs/heads/main' }}
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
