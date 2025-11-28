@@ -1,6 +1,6 @@
 # 🚀 FlyweightSoft
 
-Welcome to **FlyweightSoft** - A sole proprietorship operated by Santhosh M, specializing in innovative software solutions and VS Code extensions! 💻✨
+Welcome to **FlyweightSoft** - A sole proprietorship operated by Santhosh M, specializing in innovative software solutions 💻✨
 
 This is the official website showcasing our projects, expertise, and contact information.
 
