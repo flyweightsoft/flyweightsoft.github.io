@@ -1,59 +1,36 @@
-# FlyweightSoft
+# 🚀 FlyweightSoft
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
+Welcome to **FlyweightSoft** - A sole proprietorship operated by Santhosh M, specializing in innovative software solutions and VS Code extensions! 💻✨
 
-## Development server
+This is the official website showcasing our projects, expertise, and contact information.
 
-To start a local development server, run:
+## 🌐 Live Website
 
-```bash
-ng serve
-```
+Visit us at: [flyweightsoft.github.io](https://flyweightsoft.github.io)
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## 🛠️ Tech Stack
 
-## Code scaffolding
+- **Framework**: Angular 19+ 🅰️
+- **Styling**: Tailwind CSS 🎨
+- **Server**: NestJs ⚡
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 💼 Featured Projects
 
-```bash
-ng generate component component-name
-```
+### Custom Explorer Sort
+A powerful VS Code extension for sorting files and folders in the Explorer with custom rules! 📂🔧
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+- 🔗 [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=FlyweightSoft.custom-explorer-sort)
+- 📦 [GitHub Repository](https://github.com/flyweightsoft/custom-explorer-sort)
 
-```bash
-ng generate --help
-```
 
-## Building
+## 📬 Contact
 
-To build the project run:
+Have questions or want to collaborate? Reach out! 💌
 
-```bash
-ng build
-```
+- 📧 Email: [santhosh@flyweightsoft.com](mailto:santhosh@flyweightsoft.com)
+- 💼 LinkedIn: [Santhosh M](https://www.linkedin.com/in/santhosh-m-26382ab9/)
+- 🐙 GitHub: [@flyweightsoft](https://github.com/flyweightsoft)
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## 📄 License
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+© 2025 FlyweightSoft. All rights reserved.
