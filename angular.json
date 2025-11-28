@@ -94,6 +94,27 @@
             "scripts": []
           }
         }
+        ,
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/flyweight-soft/server",
+            "main": "src/main.server.ts",
+            "tsConfig": "tsconfig.app.json"
+          },
+          "configurations": {
+            "production": {},
+            "development": {}
+          }
+        },
+        "prerender": {
+          "builder": "@angular-devkit/build-angular:prerender",
+          "options": {
+            "browserTarget": "flyweight-soft:build:production",
+            "serverTarget": "flyweight-soft:server:production",
+            "routes": ["/"]
+          }
+        }
       }
     }
   },

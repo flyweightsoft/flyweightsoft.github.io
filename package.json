@@ -5,6 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --configuration production --base-href /",
+    "build:ssr": "ng run flyweight-soft:server:production && ng run flyweight-soft:build:production",
+    "build:prerender": "ng run flyweight-soft:prerender",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:flyweight-soft": "node dist/flyweight-soft/server/server.mjs"
