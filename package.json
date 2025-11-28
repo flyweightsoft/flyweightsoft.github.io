@@ -1,11 +1,10 @@
 {
   "name": "flyweight-soft",
-  "version": "0.0.0",
+  "version": "0.0.5",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --configuration production --base-href /",
-    "build:gh-pages": "ng build --configuration production --base-href /flyweightsoft.github.io/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:flyweight-soft": "node dist/flyweight-soft/server/server.mjs"
