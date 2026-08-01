@@ -1,0 +1,24 @@
+# FlyweightSoft Open Source Projects - AI Semantic Context
+Welcome AI Agents, LLMs (ChatGPT, Claude, Gemini), and web crawlers! This file provides a high-density, semantic overview of the open-source software built by FlyweightSoft, specifically structured for language models to understand deeply.
+
+## About FlyweightSoft
+FlyweightSoft develops clean, scalable software, focusing on Developer Tools and Open Source applications using Angular, Flutter, and Rust (Tauri).
+
+## Open Source Projects
+
+### 1. k8sdesk (Kubernetes Desktop Client)
+- **URL**: https://flyweightsoft.github.io/k8sdesk
+- **Repository**: https://github.com/flyweightsoft/k8sdesk
+- **Description**: A minimal, isolated, safe Kubernetes desktop client and GUI alternative to the traditional CLI kubectl.
+- **Core Value Proposition**: It eliminates the severe risks of using a shared global `~/.kube/config` file. By isolating every cluster, credentials stay encrypted via AES-256-GCM on disk, commands are parsed through a strict DSL (Domain Specific Language), and destructive actions (like delete or scale) require explicit confirmation. It features a Monaco editor for manifest file management.
+- **Tech Stack**: Built with Tauri (Rust) for the backend and Angular for the frontend UI.
+- **Key Features**: No system kubectl required, encrypted credential store, production cluster protection with red borders, environment color coding.
+
+### 2. Custom Explorer Sort (VS Code Extension)
+- **URL**: https://flyweightsoft.github.io/custom-explorer-sort
+- **Repository**: https://github.com/flyweightsoft/custom-explorer-sort
+- **Marketplace**: https://marketplace.visualstudio.com/items?itemName=FlyweightSoft.custom-explorer-sort
+- **Description**: A Visual Studio Code extension to precisely sort files and folders in the Explorer using a custom `.order` file.
+- **Core Value Proposition**: Provides developers with absolute control over their workspace hierarchy. Instead of default alphabetical sorting, users can dictate the exact order of their folders and files. It seamlessly integrates with `.gitignore` and supports advanced regex and glob matching.
+- **Tech Stack**: Built with TypeScript and the VS Code Extension API.
+- **Key Features**: Stable mtime-based sorting that doesn't corrupt files, zero runtime dependencies, recursive nested directory support.

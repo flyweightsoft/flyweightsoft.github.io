@@ -1,5 +1,7 @@
-import { Component, ChangeDetectionStrategy, signal, OnInit } from '@angular/core';
+import { Component, ChangeDetectionStrategy, signal, OnInit, inject, Renderer2 } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { Title, Meta } from '@angular/platform-browser';
 
 interface ReleaseAsset {
   name: string;
@@ -40,8 +42,52 @@ export class K8sdeskComponent implements OnInit {
     this.currentScreenshot.set(current < this.screenshots.length - 1 ? current + 1 : 0);
   }
 
+  titleService = inject(Title);
+  metaService = inject(Meta);
+  renderer = inject(Renderer2);
+  document = inject(DOCUMENT);
+
   ngOnInit() {
+    this.setupSeo();
     this.fetchLatestRelease();
+  }
+
+  setupSeo() {
+    // Basic SEO
+    this.titleService.setTitle('k8sdesk - Secure Kubernetes Desktop Client GUI');
+    this.metaService.updateTag({ name: 'description', content: 'k8sdesk is a minimal, safe, and focused Kubernetes operations tool built to eliminate the risks of using a shared global kubectl configuration.' });
+    this.metaService.updateTag({ name: 'keywords', content: 'kubernetes gui, k8s desktop client, kubectl alternative, secure kubernetes management, open source k8s client, tauri k8s' });
+
+    // Open Graph
+    this.metaService.updateTag({ property: 'og:title', content: 'k8sdesk - Secure Kubernetes Desktop Client' });
+    this.metaService.updateTag({ property: 'og:description', content: 'A minimal, isolated, safe Kubernetes desktop client and GUI alternative to kubectl.' });
+    this.metaService.updateTag({ property: 'og:type', content: 'website' });
+    this.metaService.updateTag({ property: 'og:image', content: 'https://flyweightsoft.github.io/assets/k8sdesk-main.png' });
+    this.metaService.updateTag({ property: 'og:url', content: 'https://flyweightsoft.github.io/k8sdesk' });
+
+    // Twitter Card
+    this.metaService.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
+    this.metaService.updateTag({ name: 'twitter:title', content: 'k8sdesk - Secure Kubernetes Desktop Client' });
+    this.metaService.updateTag({ name: 'twitter:description', content: 'A minimal, isolated, safe Kubernetes desktop client and GUI alternative to kubectl.' });
+    this.metaService.updateTag({ name: 'twitter:image', content: 'https://flyweightsoft.github.io/assets/k8sdesk-main.png' });
+
+    // Structured Data (JSON-LD)
+    const script = this.renderer.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "k8sdesk",
+      "operatingSystem": "macOS, Windows, Linux",
+      "applicationCategory": "DeveloperApplication",
+      "description": "A minimal, safe Kubernetes desktop client and GUI alternative to kubectl. Open source and built with Tauri.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    });
+    this.renderer.appendChild(this.document.head, script);
   }
 
   async fetchLatestRelease() {
