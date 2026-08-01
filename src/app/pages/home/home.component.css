@@ -63,31 +63,7 @@ html:not([data-theme="light"]) {
   color: var(--text-muted);
 }
 
-/* Bento Grid System */
-.bento-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto;
-  gap: 20px;
-}
 
-.bento-item--span-2 {
-  grid-column: span 2;
-}
-
-.bento-item--span-3 {
-  grid-column: span 3;
-}
-
-@media (max-width: 800px) {
-  .bento-grid {
-    grid-template-columns: 1fr;
-  }
-  .bento-item--span-2,
-  .bento-item--span-3 {
-    grid-column: span 1;
-  }
-}
 
 /* Card Icons */
 .card__icon-wrapper {
