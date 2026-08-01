@@ -3,7 +3,7 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   {
     path: '',
-    title: 'FlyweightSoft — Opensource Project',
+    title: 'FlyweightSoft',
     loadComponent: () => import('./pages/home/home.component').then(c => c.HomeComponent)
   },
   {
