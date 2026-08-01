@@ -90,8 +90,40 @@ html:not([data-theme="light"]) {
 }
 
 .card:hover .card__icon-wrapper {
-  transform: scale(1.05) rotate(5deg);
+  transform: scale(1.05);
   border-color: var(--border-hover);
+}
+
+.card__icon-wrapper svg {
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+}
+
+.card:hover .icon-web {
+  animation: spin-slow 4s linear infinite;
+}
+
+.card:hover .icon-mobile {
+  animation: float 2s ease-in-out infinite;
+}
+
+.card:hover .icon-devops {
+  animation: pulse-glow 2s infinite;
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.8; }
 }
 
 .card__title {
