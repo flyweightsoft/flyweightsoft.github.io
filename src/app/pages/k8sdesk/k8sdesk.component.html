@@ -48,13 +48,24 @@
 
   <!-- Screenshots -->
   <section class="section animate-fade-in-up delay-1" style="margin-top: 0; padding-top: 0;">
-    <div class="screenshots-grid">
-      <div class="screenshot-item">
-        <img src="assets/k8sdesk-main.png" alt="k8sdesk Dashboard" class="app-screenshot" />
+    <div class="carousel-container">
+      <div class="carousel-track">
+        @for (screenshot of screenshots; track screenshot.src; let i = $index) {
+          <div class="carousel-slide" [class.active]="currentScreenshot() === i">
+            <img [src]="screenshot.src" [alt]="screenshot.alt" class="app-screenshot" />
+          </div>
+        }
       </div>
-      <div class="screenshot-item">
-        <img src="assets/k8sdesk-guard.png" alt="k8sdesk Destructive Guard" class="app-screenshot" />
+      
+      <div class="carousel-dots">
+        @for (screenshot of screenshots; track screenshot.src; let i = $index) {
+          <button class="carousel-dot" [class.active]="currentScreenshot() === i" 
+                  (click)="setScreenshot(i)" [attr.aria-label]="'View ' + screenshot.alt"></button>
+        }
       </div>
+      
+      <button class="carousel-nav prev" (click)="prevScreenshot()" aria-label="Previous screenshot">‹</button>
+      <button class="carousel-nav next" (click)="nextScreenshot()" aria-label="Next screenshot">›</button>
     </div>
   </section>
 

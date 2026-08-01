@@ -20,6 +20,26 @@ export class K8sdeskComponent implements OnInit {
   linuxUrl = signal<string>('https://github.com/flyweightsoft/k8sdesk/releases/download/v1.0.5/k8sdesk_0.1.0_amd64.deb');
   isLoading = signal<boolean>(true);
 
+  screenshots = [
+    { src: '/assets/k8sdesk-main.png', alt: 'k8sdesk Dashboard' },
+    { src: '/assets/k8sdesk-guard.png', alt: 'k8sdesk Destructive Guard' }
+  ];
+  currentScreenshot = signal<number>(0);
+
+  setScreenshot(index: number) {
+    this.currentScreenshot.set(index);
+  }
+
+  prevScreenshot() {
+    const current = this.currentScreenshot();
+    this.currentScreenshot.set(current > 0 ? current - 1 : this.screenshots.length - 1);
+  }
+
+  nextScreenshot() {
+    const current = this.currentScreenshot();
+    this.currentScreenshot.set(current < this.screenshots.length - 1 ? current + 1 : 0);
+  }
+
   ngOnInit() {
     this.fetchLatestRelease();
   }
