@@ -31,6 +31,3 @@ Have questions or want to collaborate? Reach out! 💌
 - 💼 LinkedIn: [Santhosh M](https://www.linkedin.com/in/santhosh-m-26382ab9/)
 - 🐙 GitHub: [@flyweightsoft](https://github.com/flyweightsoft)
 
-## 📄 License
-
-© 2025 FlyweightSoft. All rights reserved.
