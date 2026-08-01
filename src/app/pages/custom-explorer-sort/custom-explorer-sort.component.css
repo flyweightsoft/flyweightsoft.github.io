@@ -1,0 +1,79 @@
+/* Project Hero */
+.project-hero {
+  padding: 32px 0 0;
+}
+
+.project-hero__meta {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.project-hero__title {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-bottom: 12px;
+}
+
+.project-hero__subtitle {
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 600px;
+  margin-bottom: 24px;
+}
+
+.project-hero__actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Example note */
+.example-note {
+  margin-top: 12px;
+  font-size: 13px;
+  font-style: italic;
+}
+
+/* Steps */
+.step {
+  padding: 20px;
+}
+
+.step__num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--accent-subtle);
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.step__title {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.step__desc {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Tech bar */
+.tech-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+@media (max-width: 640px) {
+  .project-hero__title { font-size: 26px; }
+}

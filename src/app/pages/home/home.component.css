@@ -1,0 +1,142 @@
+/* Hero */
+.hero {
+  padding: 64px 0 48px;
+}
+
+.hero__content {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.hero__logo {
+  width: 100px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.hero__name {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 4px;
+}
+
+.hero__role {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.hero__bio {
+  font-size: 15px;
+  max-width: 520px;
+  line-height: 1.6;
+}
+
+/* Card enhancements */
+.card__icon {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.card__title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.card__desc {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+/* Extras */
+.extras {
+  margin-top: 16px;
+  padding: 16px 20px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 14px;
+}
+
+/* Project cards */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  color: inherit;
+}
+
+.project-card__header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.project-card__name {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.project-card__desc {
+  font-size: 14px;
+  line-height: 1.6;
+  flex: 1;
+}
+
+.project-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--accent);
+}
+
+/* Note */
+.note {
+  margin-top: 24px;
+  padding: 16px 20px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 13px;
+  font-style: italic;
+}
+
+/* Footer */
+.footer {
+  padding: 32px 0;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-size: 12px;
+}
+
+@media (max-width: 640px) {
+  .hero { padding: 40px 0 32px; }
+
+  .hero__content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero__logo { width: 80px; }
+  .hero__name { font-size: 24px; }
+  .hero__bio { max-width: none; }
+}

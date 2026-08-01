@@ -1,0 +1,98 @@
+/* Project Hero */
+.project-hero {
+  padding: 32px 0 0;
+}
+
+.project-hero__meta {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.project-hero__title {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-bottom: 12px;
+}
+
+.project-hero__subtitle {
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 640px;
+  margin-bottom: 24px;
+}
+
+.project-hero__actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Highlight cards */
+.highlight-card {
+  text-align: center;
+  padding: 28px 20px;
+}
+
+.highlight-card__icon {
+  font-size: 28px;
+  margin-bottom: 14px;
+}
+
+.highlight-card__title {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.highlight-card__desc {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Feature list strong */
+.feature-list strong {
+  color: var(--text);
+  font-weight: 500;
+}
+
+/* Why grid */
+.why-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.why-item {
+  padding: 24px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.why-item__title {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 10px;
+}
+
+.why-item p {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* Tech bar */
+.tech-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+@media (max-width: 640px) {
+  .project-hero__title { font-size: 26px; }
+  .why-grid { grid-template-columns: 1fr; }
+}

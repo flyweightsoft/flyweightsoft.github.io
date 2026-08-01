@@ -1,0 +1,18 @@
+{
+  "version": 3,
+  "sources": [
+    "src/app/app.routes.ts",
+    "src/app/app.config.ts",
+    "src/app/app.component.ts",
+    "src/main.ts"
+  ],
+  "sourcesContent": [
+    "import { Routes } from '@angular/router';\n\nexport const routes: Routes = [\n  {\n    path: '',\n    loadComponent: () => import('./pages/home/home.component').then(m => m.HomeComponent)\n  },\n  {\n    path: 'custom-explorer-sort',\n    loadComponent: () => import('./pages/custom-explorer-sort/custom-explorer-sort.component').then(m => m.CustomExplorerSortComponent)\n  },\n  {\n    path: 'k8sdesk',\n    loadComponent: () => import('./pages/k8sdesk/k8sdesk.component').then(m => m.K8sdeskComponent)\n  },\n  {\n    path: '**',\n    redirectTo: ''\n  }\n];\n",
+    "import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';\nimport { provideRouter, withHashLocation } from '@angular/router';\n\nimport { routes } from './app.routes';\n\nexport const appConfig: ApplicationConfig = {\n  providers: [\n    provideZoneChangeDetection({ eventCoalescing: true }),\n    provideRouter(routes, withHashLocation())\n  ]\n};\n",
+    "import { Component, ChangeDetectionStrategy } from '@angular/core';\nimport { RouterOutlet } from '@angular/router';\n\n@Component({\n  selector: 'app-root',\n  imports: [RouterOutlet],\n  template: '<router-outlet />',\n  changeDetection: ChangeDetectionStrategy.Eager\n})\nexport class AppComponent {}\n",
+    "import { bootstrapApplication } from '@angular/platform-browser';\nimport { appConfig } from './app/app.config';\nimport { AppComponent } from './app/app.component';\n\nbootstrapApplication(AppComponent, appConfig)\n  .catch((err) => console.error(err));\n"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;AAEO,IAAM,SAAiB;AAAA,EAC5B;AAAA,IACE,MAAM;AAAA,IACN,eAAe,MAAM,OAAO,qBAA6B,EAAE,KAAK,OAAK,EAAE,aAAa;AAAA,EACtF;AAAA,EACA;AAAA,IACE,MAAM;AAAA,IACN,eAAe,MAAM,OAAO,qBAA6D,EAAE,KAAK,OAAK,EAAE,2BAA2B;AAAA,EACpI;AAAA,EACA;AAAA,IACE,MAAM;AAAA,IACN,eAAe,MAAM,OAAO,qBAAmC,EAAE,KAAK,OAAK,EAAE,gBAAgB;AAAA,EAC/F;AAAA,EACA;AAAA,IACE,MAAM;AAAA,IACN,YAAY;AAAA,EACd;AACF;;;ACdO,IAAM,YAA+B;AAAA,EAC1C,WAAW;AAAA,IACT,2BAA2B,EAAE,iBAAiB,KAAK,CAAC;AAAA,IACpD,cAAc,QAAQ,iBAAiB,CAAC;AAAA,EAC1C;AACF;;;ACDM,IAAO,eAAP,MAAO,cAAY;;qCAAZ,eAAY;EAAA;yEAAZ,eAAY,WAAA,CAAA,CAAA,UAAA,CAAA,GAAA,OAAA,GAAA,MAAA,GAAA,UAAA,SAAA,sBAAA,IAAA,KAAA;AAAA,QAAA,KAAA,GAAA;AAHZ,MAAA,oBAAA,GAAA,eAAA;;oBADD,YAAY,GAAA,eAAA,GAAA,iBAAA,EAAA,CAAA;;;sEAIX,cAAY,CAAA;UANxB;WAAU;MACT,UAAU;MACV,SAAS,CAAC,YAAY;MACtB,UAAU;MACV,iBAAiB,wBAAwB;KAC1C;;;;6EACY,cAAY,EAAA,WAAA,gBAAA,UAAA,4BAAA,YAAA,GAAA,CAAA;AAAA,GAAA;;;ACLzB,qBAAqB,cAAc,SAAS,EACzC,MAAM,CAAC,QAAQ,QAAQ,MAAM,GAAG,CAAC;",
+  "names": [],
+  "debugId": "6e6bdaaf-f724-5bd8-bb08-833ea27589ee"
+}
