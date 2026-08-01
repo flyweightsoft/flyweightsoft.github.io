@@ -148,7 +148,6 @@ html:not([data-theme="light"]) {
   background: var(--bg-surface);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
-  backdrop-filter: blur(10px);
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 }
 
