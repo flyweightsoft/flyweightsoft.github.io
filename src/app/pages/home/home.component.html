@@ -2,12 +2,12 @@
 
   <!-- Hero -->
   <header class="hero">
-    <div class="hero__content">
+    <div class="hero__content animate-fade-in-up">
       <img src="logo/logo-transparent-svg.svg" class="hero__logo" alt="FlyweightSoft logo" />
       <div>
-        <h1 class="hero__name">Santhosh M</h1>
-        <p class="hero__role text-muted">Full-Stack Developer</p>
-        <p class="hero__bio text-muted">
+        <h1 class="hero__name text-gradient">Santhosh M</h1>
+        <p class="hero__role">Full-Stack Developer</p>
+        <p class="hero__bio">
           Building clean, scalable software with Angular, Flutter, and NestJS.
           Focused on modern development practices and elegant solutions.
         </p>
@@ -15,60 +15,58 @@
     </div>
   </header>
 
-  <!-- Services -->
-  <section class="section" id="services">
+  <!-- Services (Bento Grid) -->
+  <section class="section animate-fade-in-up delay-1" id="services">
     <h2 class="section__title">Services</h2>
-    <div class="grid grid--3">
-      <div class="card">
-        <div class="card__icon">🌐</div>
+    <div class="bento-grid">
+      <div class="card bento-item--span-2">
+        <div class="card__icon-wrapper">🌐</div>
         <h3 class="card__title">Web Development</h3>
-        <p class="card__desc text-muted">Fast, scalable web applications with modern frameworks and responsive designs.</p>
+        <p class="card__desc">Fast, scalable web applications with modern frameworks and responsive designs. Delivering complex enterprise dashboards and customer-facing platforms.</p>
         <div class="card__tags">
-          <span class="tag">Angular</span>
-          <span class="tag">TailwindCSS</span>
-          <span class="tag">NestJS</span>
-          <span class="tag">Prisma</span>
+          <span class="badge">Angular</span>
+          <span class="badge">NestJS</span>
+          <span class="badge">Prisma</span>
         </div>
       </div>
+      
       <div class="card">
-        <div class="card__icon">📱</div>
-        <h3 class="card__title">Mobile Development</h3>
-        <p class="card__desc text-muted">High-performance cross-platform mobile applications with native feel.</p>
+        <div class="card__icon-wrapper">📱</div>
+        <h3 class="card__title">Mobile</h3>
+        <p class="card__desc">Cross-platform apps with native feel.</p>
         <div class="card__tags">
-          <span class="tag">Flutter</span>
-          <span class="tag">Ionic (Angular)</span>
+          <span class="badge">Flutter</span>
+          <span class="badge">Ionic</span>
         </div>
       </div>
-      <div class="card">
-        <div class="card__icon">⚙️</div>
-        <h3 class="card__title">DevOps</h3>
-        <p class="card__desc text-muted">Containerization and automated deployment pipelines for efficient workflows.</p>
+      
+      <div class="card bento-item--span-3">
+        <div class="card__icon-wrapper">⚙️</div>
+        <h3 class="card__title">DevOps & Infrastructure</h3>
+        <p class="card__desc">Containerization and automated deployment pipelines for efficient workflows. I build self-healing infrastructure that scales effortlessly under load.</p>
         <div class="card__tags">
-          <span class="tag">Docker</span>
-          <span class="tag">Kubernetes</span>
-          <span class="tag">CI/CD</span>
+          <span class="badge">Docker</span>
+          <span class="badge">Kubernetes</span>
+          <span class="badge">CI/CD</span>
+          <span class="badge">Linux</span>
         </div>
       </div>
-    </div>
-    <div class="extras">
-      <p class="text-muted">
-        <span class="text-subtle">Also:</span>
-        Microservices Architecture · Apache Superset · Redis · PWA · Plop.js
-      </p>
     </div>
   </section>
 
   <!-- Open Source -->
-  <section class="section" id="open-source">
+  <section class="section animate-fade-in-up delay-2" id="open-source">
     <h2 class="section__title">Open Source</h2>
     <div class="grid grid--2">
 
       <a routerLink="/custom-explorer-sort" class="project-card card">
         <div class="project-card__header">
-          <h3 class="project-card__name">Custom Explorer Sort</h3>
+          <div>
+            <h3 class="project-card__name">Custom Explorer Sort</h3>
+          </div>
           <span class="badge badge--success">VS Code</span>
         </div>
-        <p class="project-card__desc text-muted">
+        <p class="project-card__desc text-secondary">
           Sort files and folders in VS Code's Explorer using a simple <code>.order</code> file.
           Supports glob patterns, regex, and .gitignore integration.
         </p>
@@ -79,10 +77,12 @@
 
       <a routerLink="/k8sdesk" class="project-card card">
         <div class="project-card__header">
-          <h3 class="project-card__name">k8sdesk</h3>
+          <div>
+            <h3 class="project-card__name">k8sdesk</h3>
+          </div>
           <span class="badge badge--warning">Kubernetes</span>
         </div>
-        <p class="project-card__desc text-muted">
+        <p class="project-card__desc text-secondary">
           A focused Kubernetes operations tool. Encrypted credentials, safe command DSL,
           and destructive-action guards for production safety.
         </p>
@@ -94,37 +94,41 @@
     </div>
   </section>
 
-  <!-- Connect -->
-  <section class="section" id="connect">
-    <h2 class="section__title">Connect</h2>
-    <p class="text-muted" style="margin-bottom: 20px;">
-      Let's build something great together. Reach out for collaborations, projects, or just to say hello.
-    </p>
-    <div class="social-links">
-      <a href="https://github.com/santhosh-pro" target="_blank" rel="noopener" class="social-link" title="GitHub">
-        <img src="images/github.svg" alt="GitHub" />
-      </a>
-      <a href="https://www.linkedin.com/in/santhosh-pro/" target="_blank" rel="noopener" class="social-link" title="LinkedIn">
-        <img src="images/linkedin.svg" alt="LinkedIn" />
-      </a>
-      <a href="https://www.upwork.com/freelancers/~017cd41b09fd764257" target="_blank" rel="noopener" class="social-link" title="Upwork">
-        <img src="images/upwork.png" alt="Upwork" />
-      </a>
-      <a href="mailto:santhosh@flyweightsoft.com" class="social-link" title="Email">
-        <img src="images/gmail.svg" alt="Email" />
-      </a>
+  <!-- Connect Banner -->
+  <section class="section animate-fade-in-up delay-3" id="connect">
+    <div class="connect-banner">
+      <div class="connect-banner__text">
+        <h2 class="connect-banner__title">Let's Connect</h2>
+        <p class="connect-banner__desc">
+          Reach out for collaborations, projects, or just to say hello.
+        </p>
+      </div>
+      
+      <div class="social-links">
+        <a href="https://github.com/santhosh-pro" target="_blank" rel="noopener" class="social-link" title="GitHub">
+          <img src="images/github.svg" alt="GitHub" />
+        </a>
+        <a href="https://www.linkedin.com/in/santhosh-pro/" target="_blank" rel="noopener" class="social-link" title="LinkedIn">
+          <img src="images/linkedin.svg" alt="LinkedIn" />
+        </a>
+        <a href="https://www.upwork.com/freelancers/~017cd41b09fd764257" target="_blank" rel="noopener" class="social-link" title="Upwork">
+          <img src="images/upwork.png" alt="Upwork" />
+        </a>
+        <a href="mailto:santhosh@flyweightsoft.com" class="social-link" title="Email">
+          <img src="images/gmail.svg" alt="Email" />
+        </a>
+      </div>
     </div>
+      
     <div class="note">
-      <p class="text-subtle">
-        FlyweightSoft is a sole proprietorship operated by Santhosh M.
-        All billing is processed under my personal name.
-      </p>
+      FlyweightSoft is a sole proprietorship operated by Santhosh M.
+      All billing is processed under my personal name.
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="footer">
-    <p class="text-subtle">© 2025 FlyweightSoft. All rights reserved.</p>
+  <footer class="footer animate-fade-in-up delay-3">
+    <p>© 2025 FlyweightSoft. All rights reserved.</p>
   </footer>
 
 </div>
