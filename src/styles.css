@@ -306,7 +306,7 @@ html:not([data-theme="light"]) {
 
 /* Sections */
 .section {
-  padding: 48px 0;
+  padding: 24px 0;
   position: relative;
 }
 
@@ -327,9 +327,13 @@ html:not([data-theme="light"]) {
 .section__title {
   font-size: 28px;
   font-weight: 700;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
   text-align: center;
+  letter-spacing: -0.02em;
   position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .section__title::after {
@@ -347,7 +351,7 @@ html:not([data-theme="light"]) {
 /* Grids */
 .grid {
   display: grid;
-  gap: 20px;
+  gap: 16px;
 }
 
 .grid--2 { grid-template-columns: repeat(2, 1fr); }
@@ -359,8 +363,8 @@ html:not([data-theme="light"]) {
 
 @media (max-width: 500px) {
   .grid--2, .grid--3 { grid-template-columns: 1fr; }
-  .section { padding: 40px 0; }
-  .card { padding: 20px; }
+  .section { padding: 16px 0; }
+  .card { padding: 16px; }
 }
 
 /* Code Blocks */
@@ -410,8 +414,9 @@ html:not([data-theme="light"]) {
   font-size: 14px;
   font-weight: 500;
   color: var(--text-secondary);
-  margin-bottom: 24px;
-  padding: 6px 12px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  padding: 8px 16px;
   border-radius: 999px;
   background: var(--bg-surface);
   border: 1px solid var(--border-color);
